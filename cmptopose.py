@@ -194,7 +194,7 @@ def convertFile(path, filename):
     print(f"Converting {path}/{filename}")
     logs.insert(END, f"Converting {path}/{filename} ")
     logs.see("end")
-    with open(os.path.join(path,filename), "r") as cmpf:
+    with open(os.path.join(path,filename), "r", encoding="UTF-8") as cmpf:
         new_file_name = filename.replace(".cmp", ".pose")
         cmp_data = json.load(cmpf)
         pose_data = {
